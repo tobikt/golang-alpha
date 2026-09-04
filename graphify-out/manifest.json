@@ -126,10 +126,10 @@
     "semantic_hash": ""
   },
   ".codex/skills/start-ticket/SKILL.md": {
-    "mtime": 1788533123.4061217,
-    "seen": 1788533469.8178473,
-    "ast_hash": "ad04d83d10ba95c14fef0e24ea4740a2",
-    "semantic_hash": "ad04d83d10ba95c14fef0e24ea4740a2"
+    "mtime": 1788535474.2104802,
+    "seen": 1788535524.659161,
+    "ast_hash": "271a3512222fa43b8e8440f997bf9333",
+    "semantic_hash": ""
   },
   ".codex/skills/start-ticket/agents/openai.yaml": {
     "mtime": 1788534725.8332691,

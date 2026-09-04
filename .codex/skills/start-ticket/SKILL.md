@@ -28,15 +28,37 @@ optional branch prefix. If no identifier is provided, ask for exactly one.
 5. Start from an up-to-date `main`. Network access and changes to the local main
    branch must remain visible; request authorization if the environment requires
    it. Use fast-forward-only pull behavior.
-6. Derive a lowercase branch name using `<type>/<TICKET-ID>-<short-slug>`.
-   Choose `feat`, `fix`, `test`, `docs`, `refactor`, or `chore` from the actual
-   ticket. Create the local branch only after the prior checks succeed.
-7. Present the smallest complete implementation plan and the commands that will
+6. Derive a branch name using `<type>/<TICKET-ID>-<short-slug>`. Choose `feat`,
+   `fix`, `test`, `docs`, `refactor`, or `chore` from the actual ticket. Keep
+   the type and slug lowercase and preserve the uppercase ticket ID.
+7. For a GitHub issue, first run `gh issue develop --list` and reuse an existing
+   linked development branch when appropriate. Otherwise create and link the
+   branch natively with:
+
+   ```text
+   gh issue develop <issue> --repo <owner/repo> --base main \
+     --name <branch-name> --checkout
+   ```
+
+   This remote branch creation is an external write. State the repository,
+   issue, base, and branch and obtain explicit confirmation immediately before
+   running it. Do not replace this with an issue comment: a comment is not a
+   GitHub Development-branch link. If a branch with that name already exists
+   but is not linked, do not delete or recreate it merely to add the link;
+   report the limitation and let the pull request link the issue instead.
+8. For a ticket that has no GitHub issue, create a local branch with
+   `git switch -c <branch-name>` only after the prior checks succeed.
+9. Verify the resulting relationship: for GitHub issues, run
+   `gh issue develop --list <issue> --repo <owner/repo>`; for local-only tickets,
+   verify the current branch. Do not claim the issue is linked without this
+   check.
+10. Present the smallest complete implementation plan and the commands that will
    verify it. Do not implement unrelated roadmap work.
 
-Changing an Issue or GitHub Project status is an external write. Offer to mark
-the ticket `In Progress`, but do it only after explicit confirmation. This skill
-does not commit, push, open a pull request, or merge.
+Creating a linked development branch, changing an Issue, or changing a GitHub
+Project status is an external write. Perform each only after explicit
+confirmation. Offer to mark the ticket `In Progress`, but do it only after that
+confirmation. This skill does not commit, push, open a pull request, or merge.
 
 End with the selected ticket, created/current branch, dependency status, and
 next implementation step.
