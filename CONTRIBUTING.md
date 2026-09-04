@@ -36,6 +36,30 @@ tightly related group.
 
 ## Before opening a pull request
 
+Install the repository hooks once after cloning. This project uses `uv` to keep
+the Python-based `pre-commit` tool separate from the Go module:
+
+```powershell
+uv tool install pre-commit
+pre-commit install --install-hooks
+pre-commit install --hook-type pre-push
+```
+
+The pre-commit stage formats staged Go files and checks file hygiene, YAML,
+merge-conflict markers, accidentally added private keys, and files larger than
+1 MiB. The pre-push stage runs `go vet ./...` and `go test ./...`.
+
+Run every configured check manually with:
+
+```powershell
+pre-commit run --all-files
+pre-commit run --all-files --hook-stage pre-push
+```
+
+Hooks are a fast local feedback loop, not a replacement for CI. In an emergency,
+Git supports bypassing hooks with `--no-verify`; document the reason in the pull
+request and run the skipped checks before review.
+
 Run the checks that apply to the change:
 
 ```powershell

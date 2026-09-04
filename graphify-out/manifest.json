@@ -1,9 +1,9 @@
 {
   ".codex/hooks.json": {
-    "mtime": 1788531539.6246488,
-    "seen": 1788532191.8030632,
-    "ast_hash": "5ebef3dd159986e465ab65e4014107ec",
-    "semantic_hash": "5ebef3dd159986e465ab65e4014107ec"
+    "mtime": 1788533815.6098278,
+    "seen": 1788533868.0283458,
+    "ast_hash": "05935c0919496bb0c417d1d59d36442d",
+    "semantic_hash": ""
   },
   "cmd/api/main.go": {
     "mtime": 1788530292.929011,
@@ -84,16 +84,16 @@
     "semantic_hash": "9378bd03d56baaf78bd738ab3848f142"
   },
   "AGENTS.md": {
-    "mtime": 1788531539.6236455,
-    "seen": 1788532191.8030632,
-    "ast_hash": "03de307ef4eb1aedd7e5c6832d2cf4a3",
-    "semantic_hash": "03de307ef4eb1aedd7e5c6832d2cf4a3"
+    "mtime": 1788533815.5798266,
+    "seen": 1788533868.0283458,
+    "ast_hash": "8cca7fa1b884bfdd16903eb78f2a2f60",
+    "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1788527066.284031,
-    "seen": 1788532191.8030632,
-    "ast_hash": "7dee106436356ec081868d2ca2eb5a39",
-    "semantic_hash": "7dee106436356ec081868d2ca2eb5a39"
+    "mtime": 1788533815.189032,
+    "seen": 1788533868.0283458,
+    "ast_hash": "05ef87e9325897977c08e008528f5802",
+    "semantic_hash": ""
   },
   "SOUL.md": {
     "mtime": 1788530031.6194465,
@@ -102,10 +102,10 @@
     "semantic_hash": "e970b4d6a0c20b36e512649f1bd416ea"
   },
   "compose.yml": {
-    "mtime": 1788528550.9413507,
-    "seen": 1788532191.8030632,
-    "ast_hash": "86fac17090960de615a2190475e8c7ea",
-    "semantic_hash": "86fac17090960de615a2190475e8c7ea"
+    "mtime": 1788533815.6168294,
+    "seen": 1788533868.0283458,
+    "ast_hash": "f0b75d443141f40304d4d3adf799f4a0",
+    "semantic_hash": ""
   },
   "plan.md": {
     "mtime": 1788531941.7990258,
@@ -114,16 +114,16 @@
     "semantic_hash": "6523fa7924f09ef3cecd58c89a2226d4"
   },
   ".codex/skills/finish-ticket/SKILL.md": {
-    "mtime": 1788533123.4071217,
-    "seen": 1788533469.8178473,
-    "ast_hash": "0854a6dac7e4c372564709616445e350",
-    "semantic_hash": "0854a6dac7e4c372564709616445e350"
+    "mtime": 1788533786.202399,
+    "seen": 1788533868.0283458,
+    "ast_hash": "982eea15df9e3924aec0bf633853666e",
+    "semantic_hash": ""
   },
   ".codex/skills/finish-ticket/agents/openai.yaml": {
-    "mtime": 1788533212.099157,
-    "seen": 1788533469.8178473,
-    "ast_hash": "5a6e323b027e42c791ba2f57f41a704e",
-    "semantic_hash": "5a6e323b027e42c791ba2f57f41a704e"
+    "mtime": 1788533815.6108272,
+    "seen": 1788533868.0283458,
+    "ast_hash": "ac07b5d6c839d31ee69472ecb5c58945",
+    "semantic_hash": ""
   },
   ".codex/skills/start-ticket/SKILL.md": {
     "mtime": 1788533123.4061217,
@@ -132,10 +132,10 @@
     "semantic_hash": "ad04d83d10ba95c14fef0e24ea4740a2"
   },
   ".codex/skills/start-ticket/agents/openai.yaml": {
-    "mtime": 1788533212.097157,
-    "seen": 1788533469.8178473,
-    "ast_hash": "99fb8bf68592a69796aed0d6e6308ae0",
-    "semantic_hash": "99fb8bf68592a69796aed0d6e6308ae0"
+    "mtime": 1788533815.5898266,
+    "seen": 1788533868.0283458,
+    "ast_hash": "075dd442044aad90d7f3acdd659fd622",
+    "semantic_hash": ""
   },
   ".github/ISSUE_TEMPLATE/implementation.yml": {
     "mtime": 1788533123.4001224,
@@ -168,9 +168,15 @@
     "semantic_hash": "036842881f63d049188e614d89fb221f"
   },
   "CONTRIBUTING.md": {
-    "mtime": 1788533123.3971212,
-    "seen": 1788533469.8178473,
-    "ast_hash": "4b77c7c399cafeeb7d46b7a493b3befc",
-    "semantic_hash": "4b77c7c399cafeeb7d46b7a493b3befc"
+    "mtime": 1788533786.202399,
+    "seen": 1788533868.0283458,
+    "ast_hash": "f6e477c9f824c7bbc6800f3621896f06",
+    "semantic_hash": ""
+  },
+  ".pre-commit-config.yaml": {
+    "mtime": 1788533859.2748344,
+    "seen": 1788533868.0283458,
+    "ast_hash": "6cf9dd5f9cbb83b877f5fc63f98cb542",
+    "semantic_hash": ""
   }
 }

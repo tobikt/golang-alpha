@@ -1,0 +1,46 @@
+minimum_pre_commit_version: "4.3.0"
+default_install_hook_types: [pre-commit, pre-push]
+exclude: ^graphify-out/
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+        args: [--maxkb=1024]
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+        args: [--fix=lf]
+      - id: trailing-whitespace
+
+  - repo: local
+    hooks:
+      - id: gofmt
+        name: gofmt
+        description: Format staged Go files before commit.
+        entry: gofmt -w
+        language: system
+        types: [go]
+        stages: [pre-commit]
+
+      - id: go-vet
+        name: go vet
+        description: Run static analysis before pushing.
+        entry: go vet ./...
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-push]
+
+      - id: go-test
+        name: go test
+        description: Run the complete Go test suite before pushing.
+        entry: go test ./...
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-push]

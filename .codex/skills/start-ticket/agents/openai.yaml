@@ -2,4 +2,3 @@
   display_name: "Start Ticket"
   short_description: "Startet ein Repository-Ticket kontrolliert"
   default_prompt: "Use $start-ticket to prepare and start the selected repository ticket."
-

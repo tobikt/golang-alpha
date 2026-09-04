@@ -25,6 +25,10 @@ Turn completed local work into an evidence-backed review handoff.
 
    Run `go test -race ./...` for concurrency-sensitive work. Regenerate sqlc
    output only from source files and only when the ticket requires it.
+   When `.pre-commit-config.yaml` exists, also run both configured stages across
+   the repository: `pre-commit run --all-files` and
+   `pre-commit run --all-files --hook-stage pre-push`. Report unavailable hooks
+   rather than silently skipping them.
 5. After code or long-lived documentation changes, run `graphify update .`.
    Treat generated Graphify changes as expected, but review their scope.
 6. Reinspect the diff for secrets, generated-file mistakes, weakened tests,

@@ -2,4 +2,3 @@
   display_name: "Finish Ticket"
   short_description: "Prüft und übergibt ein fertiges Ticket"
   default_prompt: "Use $finish-ticket to verify and prepare the current ticket for review."
-
