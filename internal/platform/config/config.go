@@ -11,8 +11,8 @@ type Config struct {
 }
 
 func Load() Config {
-	addr := LoadFromEnvOrDefault("ALPHA_HTTP_ADDR", HTTP_ADDR)
-	databaseUrl := LoadFromEnvOrDefault("ALPHA_DATABASE_URL", DATABASE_URL)
+	addr := loadFromEnvOrDefault("ALPHA_HTTP_ADDR", HTTP_ADDR)
+	databaseUrl := loadFromEnvOrDefault("ALPHA_DATABASE_URL", DATABASE_URL)
 
 	return Config{
 		HTTPAddr:    addr,
@@ -20,7 +20,7 @@ func Load() Config {
 	}
 }
 
-func LoadFromEnvOrDefault(envName string, defaultValue string) string {
+func loadFromEnvOrDefault(envName string, defaultValue string) string {
 	envValue := os.Getenv(envName)
 
 	if envValue == "" {

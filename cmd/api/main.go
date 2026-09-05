@@ -2,13 +2,13 @@ package main
 
 import (
 	"context"
-	"fmt"
+	"errors"
 	"log"
 	"net/http"
 
-	"github.com/go-chi/chi/v5"
 	"kuekelheim.de/golang-alpha/internal/platform/config"
 	"kuekelheim.de/golang-alpha/internal/platform/database"
+	"kuekelheim.de/golang-alpha/internal/platform/httpserver"
 )
 
 func main() {
@@ -22,17 +22,11 @@ func main() {
 	}
 	defer db.Close()
 
-	router := chi.NewRouter()
-
-	router.Get("/health", func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Content-Type", "application/json")
-		w.WriteHeader(http.StatusOK)
-		fmt.Fprint(w, `{"status":"ok"}`)
-	})
-
+	server := httpserver.NewHTTPServer(cfg.HTTPAddr)
 	log.Printf("API listening on %s", cfg.HTTPAddr)
-
-	if err := http.ListenAndServe(cfg.HTTPAddr, router); err != nil {
+	if err := server.ListenAndServe(); err != nil &&
+		!errors.Is(err, http.ErrServerClosed) {
 		log.Fatal(err)
 	}
+
 }
