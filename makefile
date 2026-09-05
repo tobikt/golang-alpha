@@ -1,3 +1,6 @@
+include .env
+export
+
 .PHONEY: run stop
 
 run: db-up
@@ -27,10 +30,13 @@ db-down:
 	docker compose down
 
 migrate-up:
-	echo "TBD"
+	migrate -database $(ALPHA_DATABASE_URL) -path db/migrations up
 
 migrate-down:
-	echo "TBD"
+	migrate -database ${ALPHA_DATABASE_URL} -path db/migrations down
+
+migrate-version:
+	migrate -version ${ALPHA_DATABASE_URL}
 
 sqlc:
 	echo "TBD"
