@@ -7,8 +7,8 @@ import (
 	"net/http"
 
 	"github.com/go-chi/chi/v5"
-	"kuekelheim.de/golang-aplpha/internal/platform/config"
-	"kuekelheim.de/golang-aplpha/internal/platform/database"
+	"kuekelheim.de/golang-alpha/internal/platform/config"
+	"kuekelheim.de/golang-alpha/internal/platform/database"
 )
 
 func main() {

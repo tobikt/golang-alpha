@@ -38,5 +38,11 @@ migrate-down:
 migrate-version:
 	migrate -version ${ALPHA_DATABASE_URL}
 
-sqlc:
-	echo "TBD"
+sqlc: sqlc-generate sqlc-compile
+	echo "Sqlc: generate and compile"
+
+sqlc-generate:
+	sqlc generate -f .\db\sqlc.yaml
+
+sqlc-compile:
+	sqlc compile -f .\db\sqlc.yaml
