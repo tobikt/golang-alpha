@@ -19,7 +19,7 @@ func NewHTTPServer(
 	})
 
 	router.Get("/error", func(w http.ResponseWriter, r *http.Request) {
-		WriteError(w, http.StatusBadRequest, "ABC111", "TEST ERROR")
+		WriteMappedError(w, ErrForbidden)
 	})
 
 	return &http.Server{
